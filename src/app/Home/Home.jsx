@@ -13,13 +13,13 @@ export const Home = () => {
       id: '1',
       title: 'Add input with title',
       description: 'An issue should have at least a title',
-      status: 'closed',
+      status: 'open',
     },
     {
       id: '2',
       title: 'Add animations',
       description: 'The application needs simple, subtle animations',
-      status: 'pending',
+      status: 'open',
     },
   ];
   const [listData, dispatchListData] = React.useReducer(ListReducer, {
@@ -31,7 +31,6 @@ export const Home = () => {
     title: '',
     description: '',
     status: '',
-    isComplete: false,
   });
 
   function handleAdd() {
@@ -56,10 +55,13 @@ export const Home = () => {
       title: '',
       description: '',
       status: 'open',
-      isComplete: false
     });
     handleAdd()
   };
+
+  function handleStatusChange(id) {
+    dispatchListData({ type: 'UPDATE_ITEM', id });
+  }
 
   if (!listData.isShowList) {
     return null;
@@ -75,7 +77,7 @@ export const Home = () => {
       />
       <h2>Manage your tickets</h2>
       <div>
-        <List list={listData.list} onRemove={handleRemove} />
+        <List list={listData.list} onRemove={handleRemove} onStatusChange={handleStatusChange} />
       </div>
 
     </div>
