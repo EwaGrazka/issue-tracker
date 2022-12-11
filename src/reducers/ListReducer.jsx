@@ -8,7 +8,7 @@ export const ListReducer = (state, action) => {
     case 'ADD_ITEM':
       return {
         ...state,
-        list: state.list.concat({ title: action.form.title, id: action.id, description: action.form.description, status: action.form.status }),
+        list: state.list.concat({ title: action.form.title, id: action.id, description: action.form.description, status: 'open' }),
       };
 
 

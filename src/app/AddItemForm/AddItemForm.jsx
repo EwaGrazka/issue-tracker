@@ -7,7 +7,7 @@ export const AddItemForm = ({ handleChange, handleSubmit, form }) => {
   return (
     <form onSubmit={handleSubmit}>
 
-      <div class="form__group field">
+      <div className="form__group field">
         <input
           value={form.title}
           onChange={handleChange}
@@ -17,10 +17,10 @@ export const AddItemForm = ({ handleChange, handleSubmit, form }) => {
           name="title"
           id='title'
           required />
-        <label for="title" className="form__label">Title</label>
+        <label htmlFor="title" className="form__label">Title</label>
       </div>
 
-      <div class="form__group field">
+      <div className="form__group field">
         <textarea
           value={form.description}
           onChange={handleChange}
@@ -30,7 +30,7 @@ export const AddItemForm = ({ handleChange, handleSubmit, form }) => {
           name="description"
           id='description'
           required />
-        <label for="description" className="form__label">Description</label>
+        <label htmlFor="description" className="form__label">Description</label>
       </div>
 
       <button type="submit">Submit</button>

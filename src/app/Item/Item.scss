@@ -3,7 +3,7 @@
 li {
   width: 300px;
   height: 350px;
-  border: 1px solid $primary;
+  border: 1px solid $secondary;
   margin: 50px;
   border-radius: 8px;
   display: flex;
@@ -24,9 +24,10 @@ li {
   }
 
 .status {
-  background-color: $gray;
-  padding: 10px;
+  padding: 10px 30px;
   border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid $secondary;
 }
 
   .buttons-wrapper {
@@ -45,10 +46,10 @@ li {
     }
   }
   .remove-button {
-background-color: rgb(220, 67, 67);
+background-color: $gray;
   }
   .update-button {
-    background-color: $primary;
+    background-color: $secondary;
 
   }
 }
