@@ -1,0 +1,54 @@
+@import '../../index.scss';
+
+li {
+  width: 300px;
+  height: 350px;
+  border: 1px solid $primary;
+  margin: 50px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    height: 60px;
+    width: 100%;
+    margin: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  .description {
+    padding: 10px;
+    margin-bottom: 15px;
+    height: 150px;
+  }
+
+.status {
+  background-color: $gray;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+  .buttons-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 0;
+    border: none;
+    outline: none;
+ 
+    button {
+      width: 50%;
+      height: 60px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+    }
+  }
+  .remove-button {
+background-color: rgb(220, 67, 67);
+  }
+  .update-button {
+    background-color: $primary;
+
+  }
+}
